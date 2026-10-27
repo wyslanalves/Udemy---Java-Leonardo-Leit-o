@@ -1,0 +1,19 @@
+package composicao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Aluno {
+
+	String nome;
+	List<Curso> cursos = new ArrayList<>();
+	
+	Aluno(){
+		
+	}
+	
+	void adicionarCurso(Curso curso) {
+		this.cursos.add(curso);
+		curso.alunos.add(this);
+	}
+}
